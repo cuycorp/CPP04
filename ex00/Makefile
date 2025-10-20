@@ -8,10 +8,10 @@ IFLAGS = -I include
 FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic ${IFLAGS}
 
 #Header files
-HDRS = include/Animal.hpp include/Cat.hpp include/Dog.hpp
+HDRS = include/Animal.hpp include/Cat.hpp include/Dog.hpp include/WrongCat.hpp include/WrongAnimal.hpp
 
 #Source files
-SRCS = src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp
+SRCS = src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongCat.cpp src/WrongAnimal.cpp
 
 #Object file
 
