@@ -6,8 +6,11 @@ NAME = Polymorphism
 CC = c++
 IFLAGS = -I include
 FLAGS = -Wall -Wextra -Werror -std=c++98 -pedantic ${IFLAGS}
-#Source files
 
+#Header files
+HDRS = include/Animal.hpp include/Cat.hpp include/Dog.hpp
+
+#Source files
 SRCS = src/main.cpp src/Animal.cpp src/Cat.cpp src/Dog.cpp
 
 #Object file
@@ -23,7 +26,7 @@ $(NAME): obj $(OBJS)
 	$(CC) $(FLAGS) $(OBJS) -o $(NAME) 
 
 #Compile individual object files
-obj/%.o: src/%.cpp
+obj/%.o: src/%.cpp $(HDRS)
 	$(CC) $(FLAGS) -c $< -o $@
 
 
@@ -37,5 +40,10 @@ fclean: clean
 	
 # Rebuild everything
 re: fclean all
+
+
+# Valgrind check
+valgrind: $(NAME)
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes ./$(NAME)
 
 .PHONY: all clean fclean re

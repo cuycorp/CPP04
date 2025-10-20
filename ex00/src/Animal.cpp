@@ -27,4 +27,15 @@ Animal::~Animal(void)
     std::cout << "Animal destructor called" << std::endl;
     return ;
 }
+/*************Getters*************/
+ void Animal::makeSound(void)const
+ {
+    std::cout << "Indistinct sound 👾" << std::endl;
+ }
+
+/*************Getters*************/
+std::string Animal::getType() const
+{
+    return (this->type);
+}
 
