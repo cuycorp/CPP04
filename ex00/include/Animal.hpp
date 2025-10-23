@@ -11,6 +11,10 @@ class Animal
         Animal(const Animal& other);
         Animal &operator=(const Animal &other);
         virtual ~Animal();
+        /*
+        virtual is added because if instance of cat is of type animal
+        at the moment of deleting, 
+        */
         std::string getType() const;
         virtual void makeSound(void) const;
 };
