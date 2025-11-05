@@ -33,3 +33,15 @@ Brain::~Brain(void)
     return ;
 }
 
+//Getters and Setters
+
+void Brain::setIdea(int i, std::string idea)
+{
+    this->ideas[i] = idea;
+    std::cout << "Idea: " << idea << std::endl;
+}
+
+std::string Brain::getIdea(int i) const
+{
+    return (this->getIdea(i));
+}

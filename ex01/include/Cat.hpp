@@ -6,10 +6,8 @@
 # include <iostream>
 class Cat : public Animal
 {
-  private:
-	Brain *catBrain;
-
   public:
+	Brain *catBrain;
 	Cat(void);
 	Cat(const Cat &other);
 	Cat &operator=(const Cat &other);

@@ -7,10 +7,8 @@
 
 class Dog : public Animal
 {
-  private:
-	Brain *dogBrain;
-
   public:
+	Brain *dogBrain;
 	Dog(void);
 	Dog(const Dog &other);
 	Dog &operator=(const Dog &other);

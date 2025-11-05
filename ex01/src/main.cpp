@@ -32,6 +32,20 @@ int main()
 				delete animals[i]; 
 		}
 	}
+	std::cout << "--------- Testing deep n shallow copies ---------" << std::endl;
+	{
+		Dog original;
+		original.dogBrain->setIdea(0, "bark");
+		original.dogBrain->setIdea(0, "eat");
+		Dog copy = original;
+
+		std::cout << "Original idea 0: " << original.dogBrain->getIdea(0) <<  std::endl;
+		std::cout << "Copy idea 0: " << copy.dogBrain->getIdea(0) <<  std::endl;
+		
+		original.dogBrain->setIdea(0, "sleep");
+
+		
+	}
 	return (0);
 }
 

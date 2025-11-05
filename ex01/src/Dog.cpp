@@ -14,6 +14,7 @@ Dog::Dog(void)
 Dog::Dog(const Dog &other)
 {
     std::cout << "Dog copy constructor called" << std::endl;
+      
     *this = other;
 
 }
