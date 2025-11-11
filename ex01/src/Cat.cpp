@@ -37,3 +37,4 @@ void Cat::makeSound(void) const
 {
 	std::cout << "Miauu 🐱" << std::endl;
 }
+

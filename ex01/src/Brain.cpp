@@ -9,9 +9,8 @@ Brain::Brain(void)
 
 Brain::Brain(const Brain &other)
 {
-    std::cout << " 🧠 Copy constructor called" << std::endl;
-    *this = other;
-
+    std::cout << "🧠 Copy constructor called" << std::endl;
+    *this = other; //calls for assignment operator
 }
 
 
@@ -35,13 +34,13 @@ Brain::~Brain(void)
 
 //Getters and Setters
 
-void Brain::setIdea(int i, std::string idea)
+void Brain::setIdea(int i, std::string idea) 
 {
     this->ideas[i] = idea;
-    std::cout << "Idea: " << idea << std::endl;
+    //std::cout << "Idea: " << idea << std::endl;
 }
 
 std::string Brain::getIdea(int i) const
 {
-    return (this->getIdea(i));
+    return (this->ideas[i]);
 }
