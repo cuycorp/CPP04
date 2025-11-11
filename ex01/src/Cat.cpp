@@ -4,7 +4,7 @@
 // Default construtor
 Cat::Cat(void)
 {
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << "🐈 default constructor called" << std::endl;
 	this->catBrain = new Brain();
 	this->type = "Cat";
 	return ;
@@ -13,23 +13,26 @@ Cat::Cat(void)
 // Copy constructor
 Cat::Cat(const Cat &other)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "🐈 copy constructor called" << std::endl;
 	*this = other;
 }
 
 // Assignment operator overload
 Cat &Cat::operator=(const Cat &other)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "🐈 Assignment operator called" << std::endl;
 	if (this != &other)
+	{
 		this->type = other.type;
-	return (*this);
+		this->catBrain = new Brain(*other.catBrain);
+		}	
+		return (*this);
 }
 
 // Destructor
 Cat::~Cat(void)
 {
-	std::cout << "Cat destructor called ⚰️" << std::endl;
+	std::cout << "🐈 destructor called ⚰️" << std::endl;
 	delete this->catBrain;
 	return ;
 }
