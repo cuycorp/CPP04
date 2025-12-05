@@ -8,6 +8,7 @@ Topics:
     Shallow n deep copies
     https://www.youtube.com/watch?v=Ldv5i14UhTA
     + deep copies for dynamically allocated data
+    + for classes that have pointer attributes, copy constructor has to reassign the pointer
     
     Virtual
     +  is added before function declaration when you expect derived classes to override a method.
@@ -17,5 +18,6 @@ Topics:
         A class that only has abstract behaviours and doesnt have attributes
 
     + Abstract classes : 
+    https://www.youtube.com/watch?v=wE0_F4LpGVc 
     virtual enables dynamic binding at runtime(flexibility to be called by different classes)
         - can abstract classes have the default methods
