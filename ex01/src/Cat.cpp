@@ -25,8 +25,8 @@ Cat &Cat::operator=(const Cat &other)
 	{
 		this->type = other.type;
 		this->catBrain = new Brain(*other.catBrain);
-		}	
-		return (*this);
+	}	
+	return (*this);
 }
 
 // Destructor

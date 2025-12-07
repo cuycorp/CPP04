@@ -15,7 +15,8 @@ i.e. doing virtual functions, method overwriting
 
 #### Subtyping polymorphism
 - main idea: "A subtype can substitute for its parent type"
-- If virtual keyword is added before function declaration, the default method can be replaced by the inheriting object. (Dynamic polymorphism / binding). This has a performance cost, because program must decide this at runtime. 
+- If virtual keyword is added before function declaration, the default method can be replaced by the inheriting object. (Dynamic polymorphism / binding). 
+- This has a performance cost, because program must decide this at runtime. 
 e.g. if **Dog** is a subtype of **Animal**, you can use **Dog** anywhere an **Animal** is expected
 
 #### Virtual function
@@ -25,8 +26,8 @@ e.g. if **Dog** is a subtype of **Animal**, you can use **Dog** anywhere an **An
 
 ### Shallow & deep copies
 https://www.youtube.com/watch?v=Ldv5i14UhTA
-- deep copies for dynamically allocated data
-- for classes that have pointer attributes, copy constructor has to reassign the pointer
+- Deep copies for dynamically allocated data
+- Classes that have pointer attributes, copy constructor has to reassign the pointer
     
 ### Abstract and Pure virtual classes
  
@@ -35,8 +36,14 @@ https://www.youtube.com/watch?v=Ldv5i14UhTA
 
 #### Abstract classes 
 https://www.youtube.com/watch?v=wE0_F4LpGVc 
-- Virtual enables dynamic binding at runtime(flexibility to be called by different classes)
-- can abstract classes have the default methods
+- An abstract class has at least one pure virtual function 
+e.g. virtual double functionArea(void) = 0;
+- Cannot create instance of the abstract class, need to use pointers and reference. 
+- Virtual keyword enables dynamic binding at runtime (flexibility to be called by different classes).
+- Can abstract classes have the default methods
 
 ## Other Topics
 - Runtime / Compile time
+
+----pemding
+compare copy constructor and assignment operator, of ex02 with ex01
