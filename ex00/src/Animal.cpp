@@ -21,7 +21,6 @@ Animal::Animal(std::string const type)
     return;
 }
 
-
 Animal &Animal::operator=(const Animal &other)
 {
     std::cout << "Assignment operator called" << std::endl;

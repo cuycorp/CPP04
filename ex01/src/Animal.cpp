@@ -14,6 +14,13 @@ Animal::Animal(const Animal &other)
     *this = other;
 }
 
+Animal::Animal(std::string const type) 
+{
+    this->setType(type);
+    std::cout << "Animal constructor called" << std::endl;
+    return;
+}
+
 Animal &Animal::operator=(const Animal &other)
 {
     std::cout << "Assignment operator called" << std::endl;
@@ -39,3 +46,7 @@ std::string Animal::getType() const
     return (this->type);
 }
 
+void Animal::setType(std::string const typeIn)
+{
+    this->type = typeIn;
+}

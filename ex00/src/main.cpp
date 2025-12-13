@@ -4,6 +4,10 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+/*
+main takeover: redifining functions in the derived function
+i.e. modifying correctly makesound()
+*/
 int	main(void)
 {
 	std::cout << std::endl;
