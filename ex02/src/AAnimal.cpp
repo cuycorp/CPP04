@@ -13,6 +13,12 @@ AAnimal::AAnimal(const AAnimal &other)
     std::cout << "Animal copy constructor called" << std::endl;
     *this = other;
 }
+AAnimal::AAnimal(std::string const type) 
+{
+    this->setType(type);
+    std::cout << "Animal constructor called" << std::endl;
+    return;
+}
 
 AAnimal &AAnimal::operator=(const AAnimal &other)
 {
@@ -28,10 +34,13 @@ AAnimal::~AAnimal(void)
     return ;
 }
 
-/*************Getters*************/
+/*************Getters n Setters *************/
 std::string AAnimal::getType() const
 {
     return (this->type);
 }
 
-
+void AAnimal::setType(std::string const typeIn)
+{
+    this->type = typeIn;
+}

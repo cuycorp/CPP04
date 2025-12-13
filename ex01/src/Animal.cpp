@@ -34,13 +34,13 @@ Animal::~Animal(void)
     std::cout << "Animal destructor called ⚰️" << std::endl;
     return ;
 }
-/*************Getters*************/
+/*************Methods*************/
  void Animal::makeSound(void)const
  {
     std::cout << "Indistinct sound 👾" << std::endl;
  }
 
-/*************Getters*************/
+/*************Getters n Setters*************/
 std::string Animal::getType() const
 {
     return (this->type);
