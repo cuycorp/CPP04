@@ -14,6 +14,12 @@ WrongAnimal::WrongAnimal(const WrongAnimal &other)
     std::cout << "WrongAnimal copy constructor called" << std::endl;
     *this = other;
 }
+WrongAnimal::WrongAnimal(std::string const type) 
+{
+    this->setType(type);
+    std::cout << "Animal constructor called" << std::endl;
+    return;
+}
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
@@ -40,3 +46,7 @@ std::string WrongAnimal::getType() const
     return (this->type);
 }
 
+void WrongAnimal::setType(std::string const typeIn)
+{
+    this->type = typeIn;
+}

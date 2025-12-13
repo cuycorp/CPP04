@@ -9,6 +9,7 @@ class Animal
     public:
         Animal(void);
         Animal(const Animal& other);
+        Animal(std::string const type);
         Animal &operator=(const Animal &other);
         virtual ~Animal();
         /*
@@ -16,6 +17,7 @@ class Animal
         at the moment of deleting, 
         */
         std::string getType() const;
+        void setType(std::string const typeIn);
         virtual void makeSound(void) const;
 };
 
