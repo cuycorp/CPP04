@@ -42,3 +42,12 @@ void Dog::makeSound(void) const
     std::cout << "Guauu 🐶" << std::endl;
 }
 
+void Dog::setIdeaDog(int i, std::string idea)
+{
+	this->dogBrain->setIdea(i, idea);
+}
+
+std::string Dog::getIdeaDog(int i) const
+{
+    return (this->dogBrain->getIdea(i));
+}

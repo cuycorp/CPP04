@@ -40,29 +40,29 @@ int main()
 	std::cout << PINK << "---- Testing deep n shallow copies of assignment operator ----" << RESET << std::endl;
 	{
 		Dog original;
-		original.dogBrain->setIdea(0, "bark");
-		original.dogBrain->setIdea(0, "eat");
+		original.setIdeaDog(0, "bark");
+		original.setIdeaDog(0, "eat");
 		Dog copy = original;
 		std::cout << PINK << "-----------------------------------" << RESET << std::endl;
-		std::cout << "Original idea 0: " << original.dogBrain->getIdea(0) <<  std::endl;
-		std::cout << "Copy idea 0: " << copy.dogBrain->getIdea(0) <<  std::endl;
-		original.dogBrain->setIdea(0, "sleep");
-		std::cout << "Original idea 0: " << original.dogBrain->getIdea(0) <<  std::endl;
-		std::cout << "Copy idea 0: " << copy.dogBrain->getIdea(0) <<  std::endl;
+		std::cout << "Original idea 0: " << original.getIdeaDog(0) <<  std::endl;
+		std::cout << "Copy idea 0: " << copy.getIdeaDog(0) <<  std::endl;
+		original.setIdeaDog(0, "sleep");
+		std::cout << "Original idea 0: " << original.getIdeaDog(0) <<  std::endl;
+		std::cout << "Copy idea 0: " << copy.getIdeaDog(0) <<  std::endl;
 	}
 	std::cout << std::endl;
 	std::cout << PINK << "---- Testing deep n shallow copies of copy constructor ----" << RESET << std::endl;
 	{
 		Dog original;
-		original.dogBrain->setIdea(0, "bark");
-		original.dogBrain->setIdea(0, "eat");
+		original.setIdeaDog(0, "bark");
+		original.setIdeaDog(0, "eat");
 		Dog copy(original);
 		std::cout << PINK << "-----------------------------------" << RESET << std::endl;
-		std::cout << "Original idea 0: " << original.dogBrain->getIdea(0) <<  std::endl;
-		std::cout << "Copy idea 0: " << copy.dogBrain->getIdea(0) <<  std::endl;
-		original.dogBrain->setIdea(0, "sleep");
-		std::cout << "Original idea 0: " << original.dogBrain->getIdea(0) <<  std::endl;
-		std::cout << "Copy idea 0: " << copy.dogBrain->getIdea(0) <<  std::endl;
+		std::cout << "Original idea 0: " << original.getIdeaDog(0) <<  std::endl;
+		std::cout << "Copy idea 0: " << copy.getIdeaDog(0) <<  std::endl;
+		original.setIdeaDog(0, "sleep");
+		std::cout << "Original idea 0: " << original.getIdeaDog(0) <<  std::endl;
+		std::cout << "Copy idea 0: " << copy.getIdeaDog(0) <<  std::endl;
 	}
 	return (0);
 }

@@ -1,5 +1,5 @@
 #include "Brain.hpp"
-
+#include <string>
 Brain::Brain(void)
 {
     std::cout << "🧠 Default constructor called" << std::endl;
